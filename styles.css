@@ -19,6 +19,50 @@
 
     /* matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) */
 
+    /* transition: property timing timing_function delay; */
 
-    transform:matrix(1, 2, -1, 1, 80, 80)
+    transition: transform 3s cubic-bezier(1,-0.08,.05,1) 3s;
 }
+
+
+.plane:hover {
+    transform: translateX(800px) translateY(300px) scale(1.5);
+}
+
+/* @keyframes - set of rules
+
+animation-name
+animation-duration
+animation-delay
+animation-iteration-count
+animation-direction
+animation-timing-function
+animation-fill-mode
+animation */
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: cornflowerblue;
+    animation-name: boxcolor-animation;
+    animation-duration: 3s;
+    position: relative;
+    left: 20px;
+    top:20px;
+}
+
+/* Rules */
+/* from - 0%    to - 100% */
+@keyframes box-animation {
+    from {background-color: crimson; }
+    to {background-color: cornflowerblue;}
+}
+
+@keyframes boxcolor-animation {
+    0% {background-color: gold; left: 20px; top: 20px;}
+    25% {background-color: crimson;left: 220px;top:20px}
+    50% {background-color: yellowgreen; left: 220px;top:220px}
+    75% {background-color: green;left: 20px;top:220px}
+    100% {background-color: cornflowerblue; left: 20px;top:20px}
+}
+
